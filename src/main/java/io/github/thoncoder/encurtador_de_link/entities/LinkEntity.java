@@ -1,8 +1,11 @@
 package io.github.thoncoder.encurtador_de_link.entities;
 
 import jakarta.persistence.*;
+<<<<<<< HEAD
 import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
+=======
+>>>>>>> 2d9deec4220b2cf97ae6006785a01901646bf061
 
 @Entity
 @Table(name="links")
@@ -20,6 +23,7 @@ public class LinkEntity {
     @Column(nullable = false)
     private Integer visitas;
 
+<<<<<<< HEAD
     @Column(updatable = false)
     @CreationTimestamp
     private LocalDateTime createdAt;
@@ -32,6 +36,8 @@ public class LinkEntity {
         this.createdAt = createdAt;
     }
 
+=======
+>>>>>>> 2d9deec4220b2cf97ae6006785a01901646bf061
     public Long getId() {
         return id;
     }

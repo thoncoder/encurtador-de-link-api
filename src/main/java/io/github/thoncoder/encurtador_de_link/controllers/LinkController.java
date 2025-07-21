@@ -42,12 +42,19 @@ public class LinkController {
     @GetMapping("/stats/{code}")
     public ResponseEntity<StatsResponse> getStats (@PathVariable("code") String code) {
         Optional<LinkEntity> link = linkService.getByCode(code);
+<<<<<<< HEAD
         StatsResponse response = new StatsResponse(null, null, null, null);;
+=======
+        StatsResponse response = new StatsResponse(null, null, null);;
+>>>>>>> 2d9deec4220b2cf97ae6006785a01901646bf061
         if (link.isPresent()) {
             response.setCode(link.get().getCode());
             response.setVisitas(link.get().getVisitas());
             response.setOriginalUrl(link.get().getOriginalUrl());
+<<<<<<< HEAD
             response.setCreatedAt(link.get().getCreatedAt());
+=======
+>>>>>>> 2d9deec4220b2cf97ae6006785a01901646bf061
         }
         return ResponseEntity.ok(response);
     }
